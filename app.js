@@ -83,8 +83,8 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use((req, res, next)=>{
-    const success = req.flash("success");
-    const error = req.flash("error");
+    // const success = req.flash("success");
+    // const error = req.flash("error");
     res.locals.success = req.flash("success").filter(Boolean);
     res.locals.error = req.flash("error").filter(Boolean);
     res.locals.currUser = req.user;
